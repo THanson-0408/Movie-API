@@ -36,8 +36,7 @@ routes.post("/movies", (req, res) => {
   res.json(movie);
 });
 
-routes.delete("movies/:id", (req, res) => {
-  console.log("ran delete");
+routes.delete("/movies/:id", (req, res) => {
   const id = parseInt(req.params.id);
   const index = movies.findIndex((movie) => movie.id === id);
   if (index !== -1) {
